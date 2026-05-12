@@ -1,7 +1,8 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { ArrowUpRight } from "lucide-react"
+import Image from "next/image"
 
 const projects = [
   {
@@ -10,7 +11,7 @@ const projects = [
     category: "Appartement",
     location: "Lafiabougou, Bamako",
     year: "2024",
-    image: "/images/hously-1.png", // Updated path to /images/ subdirectory
+    image: "/images/hously-1.png",
   },
   {
     id: 2,
@@ -18,7 +19,7 @@ const projects = [
     category: "Lieu de travail",
     location: "Aci 2000, Bamako",
     year: "2023",
-    image: "/images/hously-2.png", // Updated path to /images/ subdirectory
+    image: "/images/hously-2.png",
   },
   {
     id: 3,
@@ -26,7 +27,7 @@ const projects = [
     category: "Appartement",
     location: "Lafiabougou, Bamako",
     year: "2023",
-    image: "/images/hously-3.png", // Updated path to /images/ subdirectory
+    image: "/images/hously-3.png",
   },
   {
     id: 4,
@@ -34,7 +35,7 @@ const projects = [
     category: "Cusine",
     location: "Kati, Bamako",
     year: "2024",
-    image: "/images/hously-4.png", // Updated path to /images/ subdirectory
+    image: "/images/hously-4.png",
   },
 ]
 
@@ -43,16 +44,21 @@ export function Projects() {
   const [revealedImages, setRevealedImages] = useState<Set<number>>(new Set())
   const imageRefs = useRef<(HTMLDivElement | null)[]>([])
 
+  const projectIds = useMemo(() => projects.map((p) => p.id), [])
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = imageRefs.current.indexOf(entry.target as HTMLDivElement)
-            if (index !== -1) {
-              setRevealedImages((prev) => new Set(prev).add(projects[index].id))
-            }
-          }
+          if (!entry.isIntersecting) return
+
+          const index = imageRefs.current.indexOf(entry.target as HTMLDivElement)
+          if (index === -1) return
+
+          const id = projects[index]?.id
+          if (!id) return
+
+          setRevealedImages((prev) => new Set(prev).add(id))
         })
       },
       { threshold: 0.2 },
@@ -90,19 +96,28 @@ export function Projects() {
               onMouseEnter={() => setHoveredId(project.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
-              <div ref={(el) => (imageRefs.current[index] = el)} className="relative overflow-hidden aspect-[4/3] mb-6">
-                <img
+              <div
+                ref={(el) => {
+                  imageRefs.current[index] = el
+                }}
+                className="relative overflow-hidden aspect-[4/3] mb-6"
+              >
+                <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className={`w-full h-full object-cover transition-transform duration-700 ${
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="lazy"
+                  className={`object-cover transition-transform duration-700 ${
                     hoveredId === project.id ? "scale-105" : "scale-100"
                   }`}
                 />
+
                 <div
                   className="absolute inset-0 bg-primary origin-top"
                   style={{
                     transform: revealedImages.has(project.id) ? "scaleY(0)" : "scaleY(1)",
-                    transition: "transform 1.5s cubic-bezier(0.76, 0, 0.24, 1)", // Increased duration from 0.6s to 1.5s for slower reveal
+                    transition: "transform 1.5s cubic-bezier(0.76, 0, 0.24, 1)",
                   }}
                 />
               </div>
@@ -123,3 +138,4 @@ export function Projects() {
     </section>
   )
 }
+

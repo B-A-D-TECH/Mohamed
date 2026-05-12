@@ -120,13 +120,44 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
   }
+
   html {
     scroll-behavior: smooth;
   }
+
+  img,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Stabilise l’affichage mobile (évite les débordements “bizarres”) */
+  section {
+    overflow-x: clip;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
+
+
 
 /* Adding stroke drawing animation for expertise icons */
 @keyframes draw-stroke {

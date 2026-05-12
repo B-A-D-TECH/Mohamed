@@ -9,7 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-6">
-              <Image src="/images/hously-logo.svg" alt="Hously" width={120} height={32} className="w-auto h-6" />
+              <Image src="/images/apple-icon.png" alt="Hously" width={120} height={32} className="w-auto h-13" />
             </Link>
             <p className="text-muted-foreground leading-relaxed max-w-sm">
               On transforme les espaces en expériences de vie extraordinaires grâce à un design sur mesure à vos besoins et une artisanat exceptionnel.

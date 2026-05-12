@@ -39,7 +39,14 @@ export function Header() {
     >
       <nav className="container mx-auto px-6 flex items-center justify-between md:px-[24]">
         <Link href="/" className="flex items-center gap-2 group" onClick={scrollToTop}>
-          <Image src="/images/hously-logo.svg" alt="Hously" width={120} height={32} className="w-auto h-6" />
+          <Image
+            src="/images/apple-icon.png"
+            alt="Hously"
+            width={152}
+            height={32}
+            className="w-[92px] sm:w-[120px] h-auto group-hover:animate-bounce"
+
+          />
         </Link>
 
         <ul className="hidden md:flex items-center gap-10 text-sm tracking-wide">
@@ -52,7 +59,7 @@ export function Header() {
             <li key={item.label}>
               <Link
                 href={item.href}
-                className="hover:text-[rgb(251,146,60)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 hover:after:w-full after:bg-[rgb(251,146,60)] after:transition-all after:duration-300 text-white"
+                className="hover:text-[rgb(251,146,60)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 hover:after:w-full after:bg-[rgb(251,146,60)] after:transition-all after:duration-300 text-white whitespace-nowrap"
               >
                 {item.label}
               </Link>
@@ -73,10 +80,11 @@ export function Header() {
         </Link>
 
         <button
-          className="md:hidden z-50 transition-colors duration-300 text-white"
+          className="md:hidden z-50 transition-colors duration-300 text-white p-2 rounded-lg"
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
+
           {mobileMenuOpen ? (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <line x1="18" y1="6" x2="6" y2="18" />
@@ -109,7 +117,8 @@ export function Header() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="hover:text-[rgb(251,146,60)] transition-colors duration-300 text-white text-4xl font-light block"
+                  className="hover:text-[rgb(251,146,60)] transition-colors duration-300 text-white text-xl sm:text-2xl font-light block leading-tight"
+
                   onClick={closeMobileMenu}
                 >
                   {item.label}
@@ -130,3 +139,4 @@ export function Header() {
     </header>
   )
 }
+

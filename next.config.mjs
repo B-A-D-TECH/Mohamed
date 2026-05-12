@@ -3,9 +3,11 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Activer les optimisations image de Next (format moderne, tailles adaptées, etc.)
   images: {
-    unoptimized: true,
+    unoptimized: false,
   },
 }
+
 
 export default nextConfig
