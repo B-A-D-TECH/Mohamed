@@ -12,23 +12,22 @@ export function Footer() {
               <Image src="/images/hously-logo.svg" alt="Hously" width={120} height={32} className="w-auto h-6" />
             </Link>
             <p className="text-muted-foreground leading-relaxed max-w-sm">
-              We design spaces that elevate living. A refined architectural experience where form, light, and intention
-              meet.
+              On transforme les espaces en expériences de vie extraordinaires grâce à un design sur mesure à vos besoins et une artisanat exceptionnel.
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="text-sm font-medium mb-4">Studio</h4>
+            <h4 className="text-sm font-medium mb-4">Atelier</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
                 <Link href="#projects" className="hover:text-foreground transition-colors">
-                  Projects
+                  Projets
                 </Link>
               </li>
               <li>
                 <Link href="#about" className="hover:text-foreground transition-colors">
-                  About
+                  A propos
                 </Link>
               </li>
               <li>
@@ -46,7 +45,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-medium mb-4">Connect</h4>
+            <h4 className="text-sm font-medium mb-4">Connection</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
                 <a href="mailto:hello@hously.com" className="hover:text-foreground transition-colors">
@@ -55,7 +54,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="tel:+1234567890" className="hover:text-foreground transition-colors">
-                  +1 (234) 567-890
+                  +223 (234) 567-890
                 </a>
               </li>
               <li>
@@ -68,13 +67,18 @@ export function Footer() {
                   LinkedIn
                 </a>
               </li>
+              <li>
+                <a href="#" className="hover:text-foreground transition-colors">
+                  Facebook
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row md:items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© 2025 Hously. All rights reserved.</p>
+          <p>© 2025 AtelierDiarra. Tout droit réservé.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-foreground transition-colors">
               Privacy

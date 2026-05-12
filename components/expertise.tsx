@@ -6,28 +6,46 @@ import { HighlightedText } from "./highlighted-text"
 
 const expertiseAreas = [
   {
-    title: "Residential Design",
-    description: "Creating homes that balance beauty with livability, where every space serves both form and function.",
+    title: "Meuble Design",
+    description: "On crée Des meubles sur mesure qui allient fonctionnalité et esthétique, transformant les espaces de vie en œuvres d'art.",
     icon: Home,
   },
   {
-    title: "Commercial Architecture",
+    title: "Meuble de bureau",
     description:
-      "Designing workspaces that inspire productivity and reflect the values of forward-thinking organizations.",
+      "Concevoir des environnements de travail inspirants avec des meubles de bureau ergonomiques et élégants, favorisant la productivité et le bien-être.",
     icon: Building,
   },
   {
-    title: "Interior Architecture",
+    title: "Meuble d'intérieur",
     description:
-      "Curating interiors that harmonize with their architectural shells, creating cohesive spatial experiences.",
+      "Nous créons des meubles d'intérieur sur mesure qui allient fonctionnalité et esthétique, transformant les espaces de vie en œuvres d'art.",
     icon: Armchair,
   },
   {
-    title: "Urban Planning",
+    title: "Meuble d'extérieur",
     description:
-      "Shaping communities through thoughtful integration of public spaces, structures, and natural elements.",
+      "Nous concevons des meubles pour l'espace extérieur qui allient confort et esthétique, transformant les terrasses et jardins en espaces de vie agréables.",
     icon: Trees,
   },
+  {
+    title: "Meuble de cuisine",
+    description:
+      "Nous créons des meubles de cuisine sur mesure qui allient fonctionnalité et esthétique, transformant les espaces de vie en œuvres d'art.",
+    icon: Home,
+  },
+  {
+    title: "Meuble de salle de bain",
+    description:
+      "Nous concevons des meubles de salle de bain sur mesure qui allient fonctionnalité et esthétique, transformant les espaces de vie en œuvres d'art.",
+    icon: Home,
+  },
+  {
+    title: "Meuble Décoration",
+    description:
+      "Nous créons des meubles de décoration sur mesure qui allient fonctionnalité et esthétique, transformant les espaces de vie en œuvres d'art.",
+    icon: Home,
+  }
 ]
 
 export function Expertise() {
@@ -59,15 +77,14 @@ export function Expertise() {
     <section id="services" ref={sectionRef} className="py-32 md:py-29">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-3xl mb-20">
-          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">What We Do</p>
+          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Qu'est ce qu'on fait ?</p>
           <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-            <HighlightedText>Expertise</HighlightedText> refined
+            <HighlightedText>Expertise</HighlightedText>
             <br />
-            through practice
+              dans la création de meubles sur mesure
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Every project draws from decades of collective experience, resulting in architecture that is both innovative
-            and timeless.
+            Nous sommes spécialisés dans la création de meubles sur mesure, offrant des solutions personnalisées pour répondre aux besoins uniques de nos clients. Notre expertise couvre une large gamme de styles et de matériaux, garantissant que chaque pièce que nous créons est à la fois fonctionnelle et esthétiquement plaisante.
           </p>
         </div>
 

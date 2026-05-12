@@ -45,9 +45,8 @@ export function Header() {
         <ul className="hidden md:flex items-center gap-10 text-sm tracking-wide">
           {[
             { label: "Home", href: "#hero" },
-            { label: "Philosophy", href: "#about" },
-            { label: "Projects", href: "#projects" },
-            { label: "What we do", href: "#services" },
+            { label: "Projets", href: "#projects" },
+            { label: "Qu'est ce qu'on fait ?", href: "#services" },
             { label: "FAQ", href: "#faq" },
           ].map((item) => (
             <li key={item.label}>
@@ -102,9 +101,9 @@ export function Header() {
           <ul className="flex flex-col gap-6 mb-8">
             {[
               { label: "Home", href: "#hero" },
-              { label: "Philosophy", href: "#about" },
-              { label: "Projects", href: "#projects" },
-              { label: "What we do", href: "#services" },
+              { label: "A propos", href: "#about" },
+              { label: "Projets", href: "#projects" },
+              { label: "Qu'est ce qu'on fait ?", href: "#services" },
               { label: "FAQ", href: "#faq" },
             ].map((item) => (
               <li key={item.label}>
@@ -124,7 +123,7 @@ export function Header() {
             className="inline-flex items-center justify-center gap-2 text-sm px-5 py-2.5 bg-white text-foreground border border-foreground/20 hover:bg-foreground hover:text-white transition-all duration-300 mb-4"
             onClick={closeMobileMenu}
           >
-            Get in touch
+            Commandez
           </Link>
         </div>
       </div>

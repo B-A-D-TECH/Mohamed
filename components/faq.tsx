@@ -5,34 +5,34 @@ import { Plus } from "lucide-react"
 
 const faqs = [
   {
-    question: "Where are your projects located?",
+    question: "Où est votre Atelier?",
     answer:
-      "While our studio is based in San Francisco, we work on projects throughout Northern California and select locations nationwide. We believe in creating architecture that responds to its specific context and community.",
+    "Notre atelier est situé à Lafiaboug-Bamako, au Mali. C'est là que nous concevons et fabriquons tous nos meubles sur mesure, en utilisant des matériaux de haute qualité et en collaborant avec des artisans locaux pour créer des pièces uniques qui répondent aux besoins de nos clients.",
   },
   {
-    question: "What is your design process timeline?",
+    question: "Quel est votre processus de conception?",
     answer:
-      "Project timelines vary based on scope and complexity. A typical residential project takes 6-12 months from initial concept to construction documentation. We work closely with clients to establish realistic timelines that allow for thoughtful design development.",
+      "Les délais des projets varient en fonction de l'étendue et de la complexité. Un projet résidentiel typique prend 6 à 12 mois depuis le concept initial jusqu'à la documentation de construction. Nous travaillons en étroite collaboration avec les clients pour établir des délais réalistes qui permettent un développement de conception réfléchi.",
   },
   {
-    question: "How do you approach sustainable design?",
+    question: "Comment abordez-vous le design durable?",
     answer:
-      "Sustainability is integral to our practice, not an add-on. We prioritize passive design strategies, material selection, energy efficiency, and longevity. Every project is designed to minimize environmental impact while maximizing occupant comfort and connection to nature.",
+      "La durabilité est intégrale à notre pratique, et non pas un ajout. Nous privilégions les stratégies de conception passive, la sélection des matériaux, l'efficacité énergétique et la longévité. Chaque projet est conçu pour minimiser l'impact environnemental tout en maximisant le confort des occupants et leur connexion avec la nature.",
   },
   {
-    question: "What services do you offer?",
+    question: "Quels services proposez-vous?",
     answer:
-      "We provide comprehensive architectural services including master planning, schematic design, design development, construction documentation, and construction administration. We can tailor our services to meet your project's specific needs.",
+      "Nous proposons une gamme complète de services de conception, y compris la conception architecturale, la planification de l'espace, la sélection des matériaux et la gestion de projet. Nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins et créer des espaces qui sont à la fois fonctionnels et esthétiquement plaisants.",
   },
   {
-    question: "Do you work with existing structures?",
+    question: "Travaillez-vous avec des structures existantes?",
     answer:
-      "Absolutely. We enjoy the challenge of adaptive reuse and renovation projects. Whether it's a historic preservation or a modern addition, we approach existing structures with respect while bringing them into dialogue with contemporary living.",
+      "Oui, nous avons de l'expérience dans la rénovation et la réhabilitation de structures existantes. Nous comprenons les défis uniques que présentent les projets de rénovation et nous sommes compétents pour trouver des solutions créatives qui respectent l'intégrité du bâtiment tout en répondant aux besoins de nos clients.",
   },
   {
-    question: "How do we get started?",
+    question: "Comment commençons-nous?",
     answer:
-      "Begin with an initial consultation where we discuss your vision, site, budget, and timeline. This helps us understand if we're the right fit for your project. From there, we'll outline a customized scope of work and fee proposal.",
+      "Le processus commence par une consultation initiale où nous discutons de votre projet, de vos besoins et de votre vision. Nous vous guiderons à travers les étapes suivantes, y compris la conception, la sélection des matériaux et la gestion du projet, pour assurer que votre projet se déroule sans heurts du début à la fin.",
   },
 ]
 
